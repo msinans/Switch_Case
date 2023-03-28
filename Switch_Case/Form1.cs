@@ -52,5 +52,25 @@ namespace Switch_Case
                 default: label4.Text = "Hatalı Mevsim!"; break;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double s1, s2, topla, cikart, bol, carp;
+            string islem = comboBox1.Text; // char operatörler = Convert.ToChar(comboBox1.Text)
+            s1 = Convert.ToDouble(textBox3.Text);
+            s2 = Convert.ToDouble(textBox4.Text);
+            topla = s1 + s2;
+            cikart = s1 - s2;
+            bol = s1 / s2;
+            carp = s1 * s2;
+            switch (islem)
+            {
+                case "Topla": label6.Text = "Toplam = " + topla; break;
+                case "Cikar": label6.Text = "Fark = " + cikart; break;
+                case "Bol": label6.Text = "Bölüm = " + bol.ToString("0.00"); break;
+                case "Carp": label6.Text = "Çarpım = " + carp; break;
+                default: label6.Text = "Hatalı Giriş!"; break;
+            }
+        }
     }
 }
